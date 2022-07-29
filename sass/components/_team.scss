@@ -1,0 +1,50 @@
+.team {
+    background-color: var(--secondary-fon-color);
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        display: flex;
+
+    }
+
+    &__card {
+        background-color: var(--main-fon-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        max-width: 270px;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__content {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+
+    &__name {
+        margin: 0 0 10px;
+        color: var(--secondary-text-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+    }
+
+    &__job {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.18;
+        text-align: center;
+    }
+}
+

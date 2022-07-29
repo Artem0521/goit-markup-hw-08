@@ -1,0 +1,38 @@
+.form__agreement {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+    padding-left: 24px;
+}
+
+.agreement__link {
+    color: var(--accent-color);
+    padding-left: 0.3em;
+}
+
+.agreement__not-check {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: opacity 250ms var(--cubic-bezier);
+}
+
+.agreement__checked {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    fill: var(--accent-color);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 250ms var(--cubic-bezier);
+}
+
+.checkbox:checked~.agreement__not-check {
+    opacity: 0;
+}
+
+.checkbox:checked~.agreement__checked {
+    opacity: 1;
+}
