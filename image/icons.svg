@@ -50,4 +50,6 @@
 <symbol id="icon-email-black" xmlns="http://www.w3.org/2000/svg"><path d="M15 3H3c-.83 0-1.5.67-1.5 1.5v9c0 .82.67 1.5 1.5 1.5h12c.82 0 1.5-.68 1.5-1.5v-9c0-.83-.68-1.5-1.5-1.5Zm-.3 3.19L9.4 9.5a.76.76 0 0 1-.8 0L3.3 6.2a.64.64 0 1 1 .68-1.08L9 8.25l5.03-3.14a.64.64 0 1 1 .67 1.08Z"/></symbol>
 <symbol id="icon-not-check" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.22 1.67v11.66H1.78V1.67h12.44Zm0-1.67H1.78C.8 0 0 .75 0 1.67v11.66C0 14.25.8 15 1.78 15h12.44c.98 0 1.78-.75 1.78-1.67V1.67C16 .75 15.2 0 14.22 0Z" fill="#212121"/></symbol>
 <symbol id="icon-checked" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="15" rx="2"/><path d="m3.96 7.75-.07-.06-.07.06-.89.84-.08.07.08.08 3.5 3.33.07.07.06-.07 7.5-7.16.08-.07-.07-.07-.88-.84-.07-.07-.07.07-6.55 6.24-2.54-2.42Z" fill="#fff" stroke="#fff" stroke-width=".2"/></symbol>
+<symbol id="icon-mobile-menu" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.67V12h24v2.67H8Zm0 6.66h24v-2.66H8v2.66ZM8 28h24v-2.67H8V28Z"/></symbol>
+<symbol id="icon-mobile-close" xmlns="http://www.w3.org/2000/svg"><path d="M29.67 12.88 27.79 11l-7.46 7.45L12.88 11 11 12.88l7.45 7.45L11 27.8l1.88 1.88 7.45-7.46 7.46 7.46 1.88-1.88-7.46-7.46 7.46-7.45Z"/></symbol>
 </defs></svg>

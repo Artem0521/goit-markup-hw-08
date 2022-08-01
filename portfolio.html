@@ -14,40 +14,68 @@
 
 <body>
     <header class="page-header">
-        <!--Верхняя линия-->
+    
     
         <div class="container page-header__nav">
             <a href="./index.html" class="logo page-header__logo"><span class="logo-web">Web</span>Studio</a>
-            <ul class="site-nav list">
-                <li class="page-header__nav-item"><a href="./index.html"
-                        class="page-header__nav-link ">Студия</a></li>
-                <li class="page-header__nav-item"><a href="./portfolio.html" class="page-header__nav-link page-header__nav-link--current">Портфолио</a>
-                </li>
-                <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Контакты</a></li>
-            </ul>
+            <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./image/icons.svg#icon-mobile-menu"></use>
+                    <use class="icon-crose" href="./image/icons.svg#icon-mobile-close"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" id="mobile-menu" data-menu>
+                <div class="page-header__navigation">
+                    <ul class="page-header__nav-list list">
+                        <li class="page-header__nav-item"><a href="./index.html"
+                                class="page-header__nav-link">Студия</a></li>
+                        <li class="page-header__nav-item"><a href="./portfolio.html"
+                                class="page-header__nav-link page-header__nav-link--current">Портфолио</a></li>
+                        <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="page-header__adress">
+                    <ul class="page-header__adress-nav list">
+                        <li class="page-header__adress-item">
+                            <a href="mail:info@example.com" class="page-header__adress-link">
+                                <svg class="page-header__adress-contacts" width="16" height="12">
+                                    <use href="./image/icons.svg#icon-envelope"></use>
+                                </svg>
+                                info@example.com
+                            </a>
+                        </li>
+                        <li class="page-header__adress-item">
+                            <a href="tel:+380991111111" class="page-header__adress-link">
+                                <svg class="page-header__adress-contacts" width="10" height="16px">
+                                    <use href="./image/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 099 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-header__network">
+                    <ul class="page-header__network-list list">
+                        <li class="page-header__network-item">
+                            <a href="#" class="page-header__network-link page-header__network-link--line">Instagram</a>
+                        </li>
+                        <li class="page-header__network-item">
+                            <a href="#" class="page-header__network-link page-header__network-link--line">Twitter</a>
+                        </li>
+                        <li class="page-header__network-item">
+                            <a href="#" class="page-header__network-link page-header__network-link--line">Facebook</a>
+                        </li>
+                        <li class="page-header__network-item">
+                            <a href="#" class="page-header__network-link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     
-            <ul class="page-header__adress-nav list">
-                <li class="page-header__adress-item">
-                    <a href="mail:info@example.com" class="page-header__adress-link">
-                        <svg class="page-header__adress-contacts" width="16" height="12">
-                            <use href="./image/icons.svg#icon-envelope"></use>
-                        </svg>
-                        info@example.com
-                    </a>
-                </li>
-                <li class="page-header__adress-item">
-                    <a href="tel:+380991111111" class="page-header__adress-link">
-                        <svg class="page-header__adress-contacts" width="10" height="16px">
-                            <use href="./image/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 099 111 11 11
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
 
-    <main>
+    <!-- <main>
 
         <section class="section">
 
@@ -270,59 +298,63 @@
 
         </section>
 
-    </main>
+    </main> -->
 
     <!--Подвал-->
     <footer class="page-footer">
     
         <div class="container page-footer__info">
-            <div>
-                <a href="./index.html" class="logo page-footer__logo--white"><span class="logo-web">Web</span>Studio</a>
-                <address>
-                    <ul class="page-footer__adress-list list">
-                        <li class="page-footer__adress-item"><a href="" class="page-footer__adress-link">г. Киев, пр-т Леси
-                                Украинки,
-                                26</a></li>
-                        <li class="page-footer__adress-item"><a href="mail:info@example.com"
-                                class="page-footer__adress-link page-footer__adress-link--grey">info@example.com</a></li>
-                        <li class="page-footer__adress-item"><a href="tel:+380991111111"
-                                class="page-footer__adress-link page-footer__adress-link--grey">+38 099 111 11 11</a></li>
-                    </ul>
-                </address>
-            </div>
-            <div class="social-link page-footer__social-link">
-                <b class="page-footer__title">присоединяйтесь</b>
+            <div class="page-footer__tablet">
+                <div class="page-footer__mobile">
+                    <a href="./index.html" class="logo page-footer__logo--white"><span class="logo-web">Web</span>Studio</a>
+                    <address class="page-footer__adress">
+                        <ul class="page-footer__adress-list list">
+                            <li class="page-footer__adress-item"><a href="" class="page-footer__adress-link">г. Киев, пр-т
+                                    Леси Украинки,
+                                    26</a></li>
+                            <li class="page-footer__adress-item"><a href="mail:info@example.com"
+                                    class="page-footer__adress-link page-footer__adress-link--grey">info@example.com</a>
+                            </li>
+                            <li class="page-footer__adress-item"><a href="tel:+380991111111"
+                                    class="page-footer__adress-link page-footer__adress-link--grey">+38 099 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="social-link page-footer__social-link">
+                    <b class="page-footer__title">присоединяйтесь</b>
     
-                <ul class="social-list list">
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link social-list__link--gray">
-                            <svg class="social-list__icon social-list__icon--white" width="20" height="20">
-                                <use href="./image/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link social-list__link--gray">
-                            <svg class="social-list__icon social-list__icon--white" width="20" height="20">
-                                <use href="./image/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link social-list__link--gray">
-                            <svg class="social-list__icon social-list__icon--white" width="20" height="20">
-                                <use href="./image/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="#" class="social-list__link social-list__link--gray">
-                            <svg class="social-list__icon social-list__icon--white" width="20" height="20">
-                                <use href="./image/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="social-list list">
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link social-list__link--gray">
+                                <svg class="social-list__icon social-list__icon--white" width="20" height="20">
+                                    <use href="./image/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link social-list__link--gray">
+                                <svg class="social-list__icon social-list__icon--white" width="20" height="20">
+                                    <use href="./image/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link social-list__link--gray">
+                                <svg class="social-list__icon social-list__icon--white" width="20" height="20">
+                                    <use href="./image/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a href="#" class="social-list__link social-list__link--gray">
+                                <svg class="social-list__icon social-list__icon--white" width="20" height="20">
+                                    <use href="./image/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="join page-footer__join">
                 <b class="page-footer__title">Подпишитесь на рассылку</b>
@@ -330,7 +362,7 @@
                     <label for="mail-input" class="vissually-hidden"></label>
                     <input type="email" name="mail-input" id="mail-input" placeholder="E-mail" required
                         class="join__mail-input" />
-                    <button type="submit" class="btn">Подписаться
+                    <button type="submit" class="btn join__btn">Подписаться
                         <svg class="btn__icon" width="24" height="24" aria-hidden="true">
                             <use href="./image/icons.svg#icon-send"></use>
                         </svg>
@@ -339,6 +371,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
