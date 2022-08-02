@@ -2,13 +2,14 @@
 
     &__overlay {
         padding: 118px 0;
-        max-width: 1600px;
+        max-width: 500px;
         margin: 0 auto;
 
         background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-                url(../../image/hero1200.jpg);
+                url(../../image/hero_mobile.jpg);
+
         background-repeat: no-repeat;
         background-position: center;
         background-color: var(--hero-fon-color);
@@ -16,20 +17,28 @@
         background-size: cover;
         object-fit: cover;
 
-        @media screen and (min-width:1200px) and (min-device-pixel-ratio: 2) {
-            padding: 200px 0;
-                    background-image: linear-gradient(to right,
+        @media screen and (min-width:500px) and(max-width: 950px) {
+            max-width: 950px;
+            background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-                url(../../image/hero1200@2x.jpg);
-        
+                url(../../image/hero_tablet.jpg);
+            }
+        @media screen and (min-width: 950px){
+            padding: 200px 0;
+            max-width: 1600px;
+            background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url(../../image/hero1200.jpg);
+
         }
 
     }
 
     &__title {
         margin: 0 auto 30px;
-        width: 360px;
+        max-width: 360px;
 
         color: var(--white-text-color);
         font-weight: 900;
@@ -39,7 +48,7 @@
         text-transform: uppercase;
 
         @media screen and (min-width:1200px) {
-            width: 696px;
+            max-width: 696px;
             font-size: 44px;
             line-height: 1.36;
 

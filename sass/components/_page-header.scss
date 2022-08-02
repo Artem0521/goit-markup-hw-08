@@ -29,6 +29,10 @@
     }
 
     &__nav-item {
+        @media screen and (max-width: 767px) {
+            width: fit-content;
+        }
+
         @media screen and (min-width: 768px) {
             display: inline-block;
         }
@@ -99,7 +103,11 @@
             margin-left: auto;
         }
     }
-
+    &__adress-item {
+        @media screen and (max-width: 767px) {
+            width: fit-content;
+        }
+    }
     &__adress-nav {
         @media screen and (min-width:1200px) {
             display: flex;
