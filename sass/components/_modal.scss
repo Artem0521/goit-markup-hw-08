@@ -1,11 +1,8 @@
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    max-width: 528px;
     min-height: 581px;
+    max-width: calc(100vw - 30px);
+    width: 100%;
+    padding-bottom: 40px;
 
     background-color: var(--main-fon-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -13,23 +10,32 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    &__btn {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        display: flex;
+    @media screen and (min-width: 768px) {
+        position: inherit;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 528px;
 
-        justify-content: center;
-        align-items: center;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn--close {
+        margin: 8px 8px 0px 0px;
         width: 30px;
         height: 30px;
         fill: var(--icon-black-color);
-
         background-color: var(--main-fon-color);
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 50%;
         cursor: pointer;
-
         transition: fill 250ms var(--cubic-bezier);
 
         &:hover,
@@ -38,12 +44,18 @@
         }
     }
 
+    &__form {
+        margin: 0 40px;
+    }
+
     &__title {
+
         margin: 0px 0px 12px;
         font-size: 20px;
         line-height: 1.15;
         letter-spacing: 0.03em;
         color: var(--secondary-text-color);
+        text-align: center;
     }
 }
 

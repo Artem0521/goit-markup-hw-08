@@ -9,6 +9,13 @@
     background: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms var(--cubic-bezier),
         visibility 250ms var(--cubic-bezier);
+
+    overflow: scroll;
+
+    @media screen and (max-width:767px) {
+        padding: 94px 15px;
+        z-index: 30;
+    }
 }
 
 .backdrop.is-hidden {

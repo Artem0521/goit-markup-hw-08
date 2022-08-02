@@ -58,6 +58,8 @@
 
     &__link {
         text-decoration: none;
+        border: 1px solid #EEEEEE;
+        cursor: pointer;
 
         &:hover,
         &:focus {
@@ -109,7 +111,6 @@
 
     &__content {
         padding: 20px 24px;
-        border: 1px solid #EEEEEE;
     }
 
     &__title {
