@@ -692,8 +692,8 @@ body {
   padding: 118px 0;
   max-width: 500px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/hero_mobile.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/hero_mobile.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero_mobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero_mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--hero-fon-color);
@@ -702,19 +702,41 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (max-width: 500px) and (min-device-pixel-ratio: 2), screen and (max-width: 500px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 500px) and (min-resolution: 192dpi), screen and (max-width: 500px) and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero_mobile@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero_mobile@2x.jpg);
+  }
+}
 @media screen and (min-width: 500px) and (max-width: 950px) {
   .hero__overlay {
     max-width: 950px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/hero_tablet.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/hero_tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero_tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero_tablet.jpg);
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 950px) and (min-device-pixel-ratio: 2), screen and (min-width: 500px) and (max-width: 950px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 500px) and (max-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 500px) and (max-width: 950px) and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero_tablet@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero_tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 950px) {
   .hero__overlay {
-    padding: 200px 0;
     max-width: 1600px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/hero1200.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/hero1200.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero1200.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero1200.jpg);
+  }
+}
+@media screen and (min-width: 950px) and (min-divice-pixel-ratio: 2), screen and (min-width: 950px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 950px) and (min-resolution: 192dpi), screen and (min-width: 950px) and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero1200@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero1200@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__overlay {
+    padding: 200px 0;
   }
 }
 .hero__title {
@@ -1477,8 +1499,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -25%);
-            transform: translate(-50%, -25%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
     max-width: 450px;
@@ -1486,8 +1508,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     max-width: 528px;
   }
 }
