@@ -1463,7 +1463,7 @@ body {
 }
 
 .modal {
-  min-height: 581px;
+  max-height: 581px;
   max-width: calc(100vw - 30px);
   width: 100%;
   padding-bottom: 40px;
@@ -1474,17 +1474,21 @@ body {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    position: inherit;
+    position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 450px;
+    -webkit-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 528px;
   }
 }
 .modal__btn {
