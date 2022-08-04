@@ -2,7 +2,17 @@
 .page-header {
     border-bottom: 1px solid var(--border-header-color);  
 
-    // position: relative;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+
     &__logo {
 
         @media screen and (min-width: 768px) {
@@ -13,46 +23,36 @@
         }
     }
 
-    &__nav {
-        @media screen and (max-width: 767px) {
-            position: relative;
-            height: 60px;
-            align-items: center;
-        }
-
-        // @media screen and (min-width: 768px) {
-        //     justify-content: space-between;
-        // }
-
+    &__navigation {
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
-    &__nav-item {
-        @media screen and (max-width: 767px) {
-            width: fit-content;
-        }
 
+    &__nav-list {
         @media screen and (min-width: 768px) {
-            display: inline-block;
-        }
-
-        &:not(:last-child) {
-            @media screen and (min-width: 768px) {
-                margin-right: 50px;
-            } 
-        }
-
-        &:last-child {
-            @media screen and (max-width: 767px) {
-                margin-bottom: 270px;
-            } 
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
+    &__nav-item {
+        @media screen and (min-width: 768px) {
+            position: relative;
+        }
+
+        & + .page-header__nav-item {
+            @media screen and (min-width: 768px) {
+                margin-left: 50px;
+            }
+    }
+    }
+    
+
     &__nav-link {
         display: block;
-        
         padding-bottom: 32px;
         color: var(--secondary-text-color);
         font-weight: 500;
@@ -66,13 +66,14 @@
         &:focus {
             color: var(--accent-color);
         }
+
         @media screen and (min-width: 768px) {
             padding-top: 32px;
+            padding-bottom: 32px;
             font-size: 14px;
             line-height: 1.14;
         }
     }
-
 
     &__nav-link--current {
         color: var(--accent-color);
@@ -94,42 +95,52 @@
         }
     }
 
-    &__adress {
-        @media screen and (min-width: 768px) {
-                margin-left: 96px;
-            }
+    &__adress-nav {
+
+        @media screen and (max-width: 767px) {
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+            margin-top: auto;
+            margin-bottom: 64px;
+        }
+        @media screen and (min-width: 767px) and (max-width: 1199px) {
+            margin-left: 84px;
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
 
         @media screen and (min-width: 1200px) {
-            margin-left: auto;
+            margin-left: 305px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            height: 100%;
         }
     }
+
     &__adress-item {
         @media screen and (max-width: 767px) {
-            width: fit-content;
+            // margin-bottom: 32px;
         }
-    }
-    &__adress-nav {
-        @media screen and (min-width:1200px) {
-            display: flex;
+
+        & + .page-header__adress-item {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                margin-top: 10px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                margin-left: 50px;
+                height: 100%;
+            }
         }
     }
 
-    &__adress-item + .page-header__adress-item {
-        @media screen and (min-width:768px) and (max-width:1199px) {
-            margin-top: 10px;
-        }
-    }
-
-    &__adress-item:not(:last-child) {
-        @media screen and (min-width: 1200px) {
-            margin: 0;
-            margin-right: 50px;
-        }
-    }
     &__adress-link {
         display: flex;
-    
-        padding-bottom: 32px;
     
         color: var(--primary-text-color);
         font-weight: 500;
@@ -143,12 +154,6 @@
         &:hover,
         &:focus {
             color: var(--accent-color);
-
-            @media screen and (max-width: 767px) {
-                font-size: 34px;
-                line-height: 1.17;
-            }
-
         }
         @media screen and (min-width: 768px) {
             padding: 0;
@@ -160,6 +165,14 @@
             font-size: 14px;
             line-height: 1.14;
         }
+    }
+    &__adress-link--big {
+        @media screen and (max-width: 768px) {
+            color: var(--accent-color);
+            font-size: 34px;
+            padding-bottom: 32px;
+        }
+        
     }
 
     &__adress-contacts {
@@ -186,7 +199,7 @@
     &__network-link {
         display: flex;
         text-decoration: none;
-        padding-top: 32px;
+        // padding-top: 32px;
         font-weight: 500;
         font-size: 18px;
         line-height: 1.22;
@@ -201,90 +214,95 @@
             background-color: rgba(33, 33, 33, .2);
             margin: 0px 10px;
         }
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
-}
 
 
-.menu-btn {
-    display: inline-flex;
-    margin: 0;
+.menu-mobile-btn {
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 20;
+
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
 }
-.menu-btn {
+.menu-container {
+
     @media screen and (max-width: 767px) {
-        position: absolute;
-        top: 10px;
-        right: 15px;
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-fon-color);
+        overflow-y: scroll;
+        z-index: 10;
     }
 }
-.menu-btn {
+
+.menu-container.is-open {
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+
+}
+.menu-mobile {
+
+    @media screen and (max-width: 767px) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 48px 40px;
+        max-width: 480px;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+.mobile-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
     @media screen and (min-width: 768px) {
         display: none;
     }
 }
+
 
 .icon-menu {
     fill: var(--icon-black-color);
     transition: fill 250ms var(--cubic-bezier);
 }
+.menu-mobile-btn:hover .icon-menu,
+.menu-mobile-btn:focus .icon-menu {
+    fill: var(--accent-color);
+}
+
 .icon-cross {
     fill: var(--icon-form-color);
     transition: fill 250ms var(--cubic-bezier);
 }
 
-.menu-btn:hover .icon-menu,
-.menu-btn:focus .icon-menu {
+.mobile-close-btn:hover .icon-crose,
+.mobile-close-btn:focus .icon-crose {
     fill: var(--accent-color);
 }
 
-.menu-btn:hover .icon-crose,
-.menu-btn:focus .icon-crose {
-    fill: var(--accent-color);
 }
-
-.menu-btn .icon-crose {
-    display: none;
-}
-
-.menu-btn.is-open .icon-crose {
-    display: block;
-}
-
-.menu-btn.is-open .icon-menu {
-    display: none;
-}
-
-.mobile-menu {
-    @media screen and (max-width: 767px) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 48px 40px;
-        width: 100%;
-        background-color: var(--main-fon-color);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
-            0px 2px 4px rgba(0, 0, 0, 0.08),
-            0px 1px 3px rgba(0, 0, 0, 0.16);
-        display: none;
-            
-        &.is-open {
-            display: block;
-            z-index: 10;
-        }
-    }
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-        margin-left: 76px;
-    }
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        width: 100%;
-        margin: 0;
-    }
-}
-
-

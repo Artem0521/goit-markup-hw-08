@@ -18,29 +18,35 @@
         <div class="container page-header__nav">
             <a href="./index.html" class="logo page-header__logo"><span class="logo-web">Web</span>Studio</a>
             <button 
-            type="button" 
-                class="menu-btn" 
+                type="button" 
+                class="menu-mobile-btn" 
                 aria-expanded="false"
-                aria-controls="mobile-menu"
-                data-menu-button>
+                aria-controls="menu-container"
+                data-mobile-open>
+
                 <svg 
                     width="40" 
                     height="40" 
                     aria-label="Переключатель мобильного меню">
                     <use class="icon-menu" href="./image/icons.svg#icon-mobile-menu"></use>
-                    <use class="icon-crose" href="./image/icons.svg#icon-mobile-close"></use>
                 </svg>
             </button>
-            <div class="mobile-menu" id="mobile-menu" data-menu>
-                <div class="page-header__navigation">
-                    <ul class="page-header__nav-list list">
-                        <li class="page-header__nav-item"><a href="./index.html"
-                                class="page-header__nav-link page-header__nav-link--current">Студія</a></li>
-                        <li class="page-header__nav-item"><a href="./portfolio.html" class="page-header__nav-link">Портфоліо</a></li>
-                        <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Контакти</a></li>
-                    </ul>
-                </div>
-                <div class="page-header__adress">
+            <div class="menu-container" id="menu-container" data-menu>
+                <div class="menu-mobile">
+                    <button type="button" class="mobile-close-btn" aria-expanded="false" aria-controls="mobile-menu" data-mobile-close>
+                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                            <use class="icon-crose" href="./image/icons.svg#icon-mobile-close"></use>
+                        </svg>
+                    </button>
+                    <div class="page-header__navigation">
+                        <ul class="page-header__nav-list list">
+                            <li class="page-header__nav-item"><a href="./index.html"
+                                    class="page-header__nav-link page-header__nav-link--current">Студія</a></li>
+                            <li class="page-header__nav-item"><a href="./portfolio.html" class="page-header__nav-link">Портфоліо</a></li>
+                            <li class="page-header__nav-item"><a href="" class="page-header__nav-link">Контакти</a></li>
+                        </ul>
+                    </div>
+
                     <ul class="page-header__adress-nav list">
                         <li class="page-header__adress-item">
                             <a href="mail:info@example.com" class="page-header__adress-link">
@@ -51,7 +57,7 @@
                             </a>
                         </li>
                         <li class="page-header__adress-item">
-                            <a href="tel:+380991111111" class="page-header__adress-link">
+                            <a href="tel:+380991111111" class="page-header__adress-link page-header__adress-link--big">
                                 <svg class="page-header__adress-contacts" width="10" height="16px">
                                     <use href="./image/icons.svg#icon-smartphone"></use>
                                 </svg>
@@ -59,8 +65,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="page-header__network">
                     <ul class="page-header__network-list list">
                         <li class="page-header__network-item">
                             <a href="#" class="page-header__network-link page-header__network-link--line">Instagram</a>
@@ -77,7 +81,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </header> 
 
